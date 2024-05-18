@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [
       vue(),
   ],
-  base: '/zebra-layout/',
+  base: '/zebra-layout',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
