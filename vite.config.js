@@ -3,6 +3,7 @@ import vue from '@vitejs/plugin-vue';
 //import { sass } from '@vitejs/plugin-scss';
 
 export default defineConfig({
+  base: '/vue-news-app',
   plugins: [
       vue(),
       //sass()
