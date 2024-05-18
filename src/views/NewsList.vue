@@ -16,11 +16,11 @@
 
 <script>
 import { ref, onMounted } from 'vue';
-import { useNewsStore } from '../store/store.js';
-import NewsItem from '../components/NewsItem.vue';
-import Header from "../components/Header.vue";
-import Title from "../components/Title.vue";
-import Footer from "../components/Footer.vue";
+import { useNewsStore } from '@/store/store.js';
+import NewsItem from '@/components/NewsItem.vue';
+import Header from "@/components/Header.vue";
+import Title from "@/components/Title.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
   components: {

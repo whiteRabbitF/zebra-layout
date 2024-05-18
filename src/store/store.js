@@ -1,6 +1,8 @@
 import { defineStore } from 'pinia';
 import axios from 'axios';
 
+const host = import.meta.env.VITE_API_HOST;
+
 export const useNewsStore = defineStore('news', {
     state: () => ({
         news: [],
@@ -9,8 +11,8 @@ export const useNewsStore = defineStore('news', {
     }),
     actions: {
         async fetchNews(page = 1) {
-            const url = `https://flems.github.io/test/api/news/${page}/`;
-            console.log(`Fetching news from: ${url}`);
+            const url = `${host}/news/${page}/`;
+            console.log(`Загрцжены новости с: ${url}`);
             try {
                 const response = await axios.get(url);
                 console.log('News data:', response.data);
@@ -25,7 +27,3 @@ export const useNewsStore = defineStore('news', {
         },
     },
 });
-
-
-
-
