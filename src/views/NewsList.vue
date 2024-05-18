@@ -49,7 +49,7 @@ export default {
     onMounted(async () => {
       try {
         loading.value = true;
-        await new Promise(resolve => setTimeout(resolve, 700)) //не судите строго за этот лоадер )
+        await new Promise(resolve => setTimeout(resolve, 700)) //угарный лоадер )
         await newsStore.fetchNews();
         canLoadMore.value = newsStore.currentPage < newsStore.totalPages;
       } catch (error) {
