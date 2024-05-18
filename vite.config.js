@@ -1,12 +1,19 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import path from 'path';
+import { createHtmlPlugin } from 'vite-plugin-html';
 
 export default defineConfig({
   plugins: [
-      vue(),
+    vue(),
+    createHtmlPlugin({
+      inject: {
+        data: {
+          BASE_URL: process.env.NODE_ENV === 'production' ? '/zebra-layout/' : '/',
+        },
+      },
+    }),
   ],
-  base: '/zebra-layout',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
@@ -24,4 +31,7 @@ export default defineConfig({
     },
   },
 });
+
+
+
 
