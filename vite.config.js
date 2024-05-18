@@ -9,12 +9,12 @@ export default defineConfig({
     createHtmlPlugin({
       inject: {
         data: {
-          BASE_URL: process.env.NODE_ENV === 'production' ? './' : '/',
+          BASE_URL: process.env.NODE_ENV === 'production'? './' : '/',
         },
       },
     }),
   ],
-  base: process.env.NODE_ENV === 'production' ? './' : '/',
+  base: process.env.NODE_ENV === 'production'? './' : '/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
@@ -32,8 +32,3 @@ export default defineConfig({
     },
   },
 });
-
-
-
-
-
