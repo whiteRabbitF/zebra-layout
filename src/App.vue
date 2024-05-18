@@ -1,12 +1,15 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <NewsList />
   </div>
 </template>
 
 <script>
+import NewsList from "@/views/NewsList.vue";
+
 export default {
   name: 'App',
+  components: {NewsList},
 };
 </script>
 
