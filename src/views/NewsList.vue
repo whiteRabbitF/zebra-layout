@@ -8,7 +8,7 @@
       </div>
     </div>
     <button v-if="canLoadMore" @click="loadMore">Загрузить еще</button>
-    <div v-if="loading" class="loader">Загрузка...</div>
+    <div v-if="loading" class="loader"></div>
   </main>
   <Footer />
 </template>
@@ -49,7 +49,7 @@ export default {
     onMounted(async () => {
       try {
         loading.value = true;
-        await new Promise(resolve => setTimeout(resolve, 700)) //угарный лоадер )
+        await new Promise(resolve => setTimeout(resolve, 1000))
         await newsStore.fetchNews();
         canLoadMore.value = newsStore.currentPage < newsStore.totalPages;
       } catch (error) {

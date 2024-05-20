@@ -22,7 +22,7 @@ export const useNewsStore = defineStore('news', {
                     this.totalPages = response.data.nav.total;
                 }
             } catch (error) {
-                console.error('Error fetching news:', error);
+                console.error('Ошибка при запросе:', error);
             }
         },
     },
